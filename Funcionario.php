@@ -53,4 +53,8 @@ class Funcionario
     {
         $this->dataAdmissao = $data;
     }
+    public function calculaSalario()
+    {
+      return $this->getCargo()->getRegra()->calcula($this);
+    }
 }
