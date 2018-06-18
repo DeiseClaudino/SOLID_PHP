@@ -4,6 +4,7 @@ class CalculadoraDeSalario
 {
     public function calcula(Funcionario $funcionario)
     {
+        $funcionario->getCargo()->getRegra()->calcula($funcionario);
         if ($funcionario->getCargo() instanceof Desenvolvedor) {
             $regra = new DezOuVintePorcento($funcionario);
             return $regra->calcula($funcionario);
