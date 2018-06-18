@@ -49,18 +49,8 @@ class Funcionario
         $this->nome = $nome;
     }
 
-    public function setCargo(Cargo $cargo)
-    {
-        $this->cargo = $cargo;
-    }
-
     public function setDataAdmissao(DateTime $data)
     {
         $this->dataAdmissao = $data;
-    }
-
-    public function setSalario($salario)
-    {
-        $this->salario = $salario;
     }
 }
