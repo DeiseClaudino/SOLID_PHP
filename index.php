@@ -9,7 +9,7 @@ spl_autoload_register("carregaClasse");
 
 $dev = new Funcionario();
 $dev->setSalario(3100);
-$dev->setCargo(new Desenvolvedor());
+$dev->setCargo(new Desenvolvedor(new DezOuVintePorcento()));
 $calculadora = new CalculadoraDeSalario();
 
 echo $calculadora->calcula($dev);
