@@ -1,6 +1,6 @@
 <?php
 
-class DezOuVintePorcento
+class DezOuVintePorcento implements RegraDeCalculo
 {
     public function calcula(Funcionario $funcionario)
     {
