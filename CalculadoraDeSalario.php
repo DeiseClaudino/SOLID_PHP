@@ -6,10 +6,10 @@ class CalculadoraDeSalario
     {
         if ($funcionario->getCargo() instanceof Desenvolvedor) {
             $regra = new DezOuVintePorcento($funcionario);
-            return $regra->dezOuVinteECincoPorcento($funcionario);
+            return $regra->calcula($funcionario);
         } elseif ($funcionario->getCargo() instanceof Tester || $funcionario->getCargo() instanceof DBA) {
             $regra = new QuinzeOuVinteECincoPorcento($funcionario);
-            return $regra->quinzeOuVintePorcento($funcionario);
+            return $regra->calcula($funcionario);
         }
     }
 }
