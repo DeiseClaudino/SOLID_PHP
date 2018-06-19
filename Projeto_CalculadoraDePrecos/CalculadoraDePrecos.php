@@ -3,9 +3,9 @@
 class CalculadoraDePrecos
 {
     private $tabela;
-    private $frete;
+    private $entrega;
 
-    public function __construct(TabeladePreco $tabela, ServicoDeEntrega $servico)
+    public function __construct(TabeladePreco $tabela, ServicoDeEntrega $frete)
     {
         $this->tabela = $tabela;
         $this->entrega = $frete;
@@ -13,7 +13,7 @@ class CalculadoraDePrecos
     public function calcula(Compra $produto)
     {
         $desconto = $this->tabela->descontoPara($produto->getValor());
-        $frete = $this->frete->para($produto->getCidade());
+        $frete = $this->entrega->para($produto->getCidade());
 
         return $produto->getValor() * (1 - $desconto) + $frete;
     }
