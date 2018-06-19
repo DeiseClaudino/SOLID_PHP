@@ -1,6 +1,8 @@
 # SOLID_PHP
 
-Classe criada para aplicar conhecimentos obtidos no curso de SOLID PHP.
+Projetos criados com o intuito de aplicar conhecimentos obtidos no curso de SOLID PHP.
+
+Projetos: Projeto_Salário, Projeto_NotaFiscal.
 
 ## Getting Started
 
@@ -8,11 +10,11 @@ Essas instruções farão com que você tenha uma cópia do projeto em execuçã
 
 ## Installing
 
-  Para executar através do terminal é  usado o comando "sudo php -S 0.0.0.0:80 -t" com isso o link está disponível para acesso.
+  Para executar através do terminal é  usado o comando "sudo php -S 0.0.0.0:80 -t 'nome_do_projeto'" com isso o link está disponível para acesso.
 
 ## Running the tests
 
-O arquivo criado é fictício, sendo assim não pode ser executado.
+Os projetos podem ser executamos sem nenhum problema, seu funcionamento é simples e dispensa testes pois seu objetivo é ser modelado de acordo com as práticas do SOLID.
 
 
 ## Built With
