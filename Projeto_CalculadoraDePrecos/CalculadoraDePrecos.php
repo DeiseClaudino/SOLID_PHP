@@ -2,13 +2,13 @@
 
 class CalculadoraDePrecos
 {
+    public function __construct(TabeladePreco $tabela, ServicoDeEntrega $servico)
+    {
+    }
     public function calcula(Compra $produto)
     {
-        $tabela = new TabelaDePrecoPadrao();
-        $correios = new Frete();
-
         $desconto = $tabela->descontoPara($produto->getValor());
-        $frete = $correios->para($produto->getCidade());
+        $frete = $this->entrega->para($produto->getCidade());
 
         return $produto->getValor() * (1 - $desconto) + $frete;
     }
