@@ -2,7 +2,7 @@
 
 class NotaFiscalDao implements AcaoAposGerarNota
 {
-    public function persiste(NotaFiscal $nf)
+    public function executa(NotaFiscal $nf)
     {
         echo "Persistindo nota fiscal<br/>";
     }
