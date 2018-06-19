@@ -1,6 +1,7 @@
 <?php
 
-class Nota Fiscal{
+class NotaFiscal
+{
   private $id;
   private $valorBruto;
   private $impostos;
@@ -24,7 +25,7 @@ class Nota Fiscal{
     }
 
 
-    public function getValorBruto())
+    public function getValorBruto()
       {
         return $this->valorBruto;
       }

@@ -2,7 +2,6 @@
 
 interface AcaoAposGerarNota
 {
-    public function executa(NotaFiscal $nf)
-    {
-    }
+    public function executa(NotaFiscal $nf);
+
 }
