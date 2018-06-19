@@ -1,12 +1,12 @@
 <?php
 
-class Frete{
-
-  public function para($cidade)
-  {
-    if (strtoupper($cidade) == "SAO PAULO") {
-      return 15;
+class Frete implements ServicoDeEntrega
+{
+    public function para($cidade)
+    {
+        if (strtoupper($cidade) == "SAO PAULO") {
+            return 15;
+        }
+        return 30;
     }
-    return 30;
-  }
 }
