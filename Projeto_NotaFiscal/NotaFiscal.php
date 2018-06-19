@@ -45,4 +45,9 @@ class Nota Fiscal{
       {
           $this->impostos = $impostos;
       }
+
+      public function getValorLiquido()
+      {
+        return $this->valorBruto - $this->impostos;
+      }
 }
