@@ -2,7 +2,7 @@
 
 Projetos criados com o intuito de aplicar conhecimentos obtidos no curso de SOLID PHP.
 
-Projetos: Projeto_Salário, Projeto_NotaFiscal, CalculadoraDePrecos.
+Projetos: Projeto_Salario, Projeto_NotaFiscal, Projeto_CalculadoraDePrecos, Projeto_Boleto e Projeto_Conta.
 
 ## Getting Started
 
@@ -16,11 +16,9 @@ Essas instruções farão com que você tenha uma cópia do projeto em execuçã
 
 Os projetos podem ser executamos sem nenhum problema, seu funcionamento é simples e dispensa testes pois seu objetivo é ser modelado de acordo com as práticas do SOLID.
 
-
 ## Built With
 
 PHP - Linguagem de Programação;
-
 
 ## Contributing
 
