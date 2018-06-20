@@ -1,18 +1,18 @@
 <?php
-class ContaDeEstudante extends ContaComum
+class ContaDeEstudante
 {
     private $m;
     private $milhas;
 
     public function __construct()
     {
-        $m = new ManipuladorDeSaldo();
+        $this->m = new ManipuladorDeSaldo();
     }
 
     public function deposita($valor)
     {
-        $m->deposita($valor);
-        $this->milhas += (int) $valor;
+        $this->m->deposita($valor);
+        $this->milhas += $valor;
     }
 
     public function getMilhas()

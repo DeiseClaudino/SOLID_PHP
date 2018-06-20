@@ -4,6 +4,10 @@ class ManipuladorDeSaldo
 {
     private $saldo;
 
+    public function __construct()
+    {
+        $this->saldo = 0;
+    }
 
     public function saca($valor)
     {
