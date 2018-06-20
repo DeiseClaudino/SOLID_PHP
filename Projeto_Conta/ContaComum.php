@@ -2,8 +2,6 @@
 
 class ContaComum
 {
-    protected $saldo;
-
     public function __construct($saldo)
     {
         $this->saldo = 0;
