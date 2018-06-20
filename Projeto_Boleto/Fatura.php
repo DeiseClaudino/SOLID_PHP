@@ -11,6 +11,7 @@ class Fatura
     {
         $this->cliente = $cliente;
         $this->valor = $valor;
+        $this->pago = false;
     }
 
     public function getCliente()
@@ -30,15 +31,24 @@ class Fatura
     public function addPagamento(Pagamento $pagamento)
     {
         $this->pagamentos[] = $pagamento;
+
+        if ($this->totalDePagamentos() >= $this->valor) {
+            $this->pago = true;
+        }
+    }
+
+    private function totalDePagamentos()
+    {
+        $total = 0;
+
+        foreach ($this->pagamentos as $pagamento) {
+            $total += $pagamento->getValor();
+        }
+        return $total;
     }
 
     public function isPago()
     {
         return $this->pago;
-    }
-
-    public function setPago($pago)
-    {
-        $this->pago = $pago;
     }
 }
