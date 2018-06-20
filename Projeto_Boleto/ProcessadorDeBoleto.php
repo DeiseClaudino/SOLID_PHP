@@ -1,23 +1,23 @@
 <?php
 
-class ProcessadorDeBoleto{
+class ProcessadorDeBoleto
+{
+    public function processa($boletos, Fatura $fatura)
+    {
+        $total = 0;
 
-  public function processa($boletos Fatura $fatura)
-  {
-    $total = 0;
+        foreach ($boletos as $boleto) {
+            $pagamento = new Pagamento($boleto->getValor(), MeioPagamento::Boleto);
 
-    foreach ($boletos as $boleto) {
-      $pagamento = new Pagamento($boleto->getValor(), MeioPagamento::Boleto);
+            $fatura->addPagamento($pagamento);
 
-      $fatura->addPagamento($pagamento);
+            $total += $boleto->getValor();
+        }
+        if ($total >= $fatura->getValor()) {
+            $fatura->setPago(true);
 
-      $total += $boleto->getValor();
+            return true;
+        }
+        return false;
     }
-    if ($total >= $fatura->getValor()) {
-      $fatura->setPago(true);
-
-      return true;
-    }
-    return false;
-  }
 }
