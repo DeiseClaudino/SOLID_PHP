@@ -23,4 +23,9 @@ class ManipuladorDeSaldo
     {
         return $this->saldo;
     }
+
+    public function rende()
+    {
+        $this->saldo *= $taxa;
+    }
 }

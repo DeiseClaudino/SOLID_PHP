@@ -2,13 +2,10 @@
 
 class ContaComum
 {
-    public function __construct($saldo)
-    {
-        $this->saldo = 0;
-    }
+    private $manipulador;
 
-    public function rende()
+    public function __construct()
     {
-        $this->saldo *= 1.1;
+        $this->manipulador = new ManipuladorDeSaldo();
     }
 }
